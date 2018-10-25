@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/QQSimple.iml" filepath="$PROJECT_DIR$/QQSimple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QQPurify.iml" filepath="$PROJECT_DIR$/QQPurify.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
