@@ -93,7 +93,7 @@ public class SidebarHook extends BaseHook {
         });
 
         // 免流量特权
-        findAndHookMethod(QQSettingMe, "P", replaceNull("hide_sidebar_kingCard"));
+        findAndHookMethod(QQSettingMe, "Q", replaceNull("hide_sidebar_kingCard"));
     }
 
     private void hideViews(XC_MethodHook.MethodHookParam param) {

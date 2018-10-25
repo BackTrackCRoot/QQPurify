@@ -3,6 +3,7 @@
 
     <string name="app_name">QQ净化</string>
     <string name="author_name">zpp0196</string>
+    <string name="coder_name">CRoot</string>
     <string name="qq_name">QQ</string>
 
     <string name="menu_reboot_qq">重启QQ</string>
@@ -47,13 +48,14 @@
 
     <string name="about_item_version">版本</string>
     <string name="about_item_author">作者</string>
+    <string name="about_item_coder">二次开发人员</string>
     <string name="about_item_thanks">致谢</string>
     <string name="about_item_donate">捐赠</string>
     <string name="about_item_github">源码</string>
     <string name="about_item_log">日志</string>
     <string name="about_item_thanks_title">特别鸣谢</string>
     <string name="about_item_thanks_content">感谢<a href="http://www.coolapk.com/u/753785">祈无</a>提供的<a href="https://github.com/Qiwu2542284182/QQ_Simplity">QQ精简模块</a>源码以及<a href="http://www.coolapk.com/u/1257513">weishu</a>和<a href="http://www.coolapk.com/u/485448">YiTry</a>提供的技术支持，还有<a href="http://www.coolapk.com/u/524939">消失١</a>等酷基大佬们提供的教程，然后谢谢<a href="http://www.coolapk.com/u/491391">sftmi</a>帮我画的图标，还有谢谢<a href="http://www.coolapk.com/u/738446">静若兰亭</a>的帮忙，当然也不能少了所有捐赠过和支持过我的小伙伴们。Thank you very much!\n\n\n<b>致谢开源项目</b>：\n<a href="https://github.com/Qiwu2542284182/QQ_Simplity">QQ_Simplity</a>\n<a href="#">QQUnrecalled</a>\n<a href="https://github.com/rovo89/XposedInstaller">Xposed Installer</a>\n<a href="https://github.com/afollestad/material-dialogs">Material Dialogs</a></string>
-    <string name="about_github_url">https://github.com/zpp0196/QQSimple</string>
+    <string name="about_github_url">https://github.com/BackTrackCRoot/QQPurify</string>
     <string name="about_readme"><a href="https://github.com/zpp0196/QQSimple/blob/master/README.md">Readme</a></string>
     <string name="about_issues"><a href="https://github.com/zpp0196/QQSimple/issues">Issues</a></string>
     <string name="about_releases"><a href="https://github.com/zpp0196/QQSimple/releases">Releases</a></string>

@@ -3,6 +3,7 @@ package me.zpp0196.qqsimple.fragment;
 import android.annotation.SuppressLint;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -48,7 +49,7 @@ public class AboutFragment extends BaseFragment {
         Log.i("AboutFragment", "eggsClickNum: " + eggsClickNum);
     }
 
-    @SuppressLint ("LogConditional")
+    @SuppressLint("LogConditional")
     @Override
     protected void init() {
         addItems(getMainActivity());
@@ -67,6 +68,7 @@ public class AboutFragment extends BaseFragment {
 
         AboutItem version = new AboutItem(mainActivity, R.drawable.ic_item_comm_info, R.string.about_item_version, String.format("%s(%s)", VERSION_NAME, VERSION_CODE));
         AboutItem author = new AboutItem(mainActivity, R.drawable.ic_item_about_author, R.string.about_item_author, getString(R.string.author_name));
+        AboutItem coder = new AboutItem(mainActivity, R.drawable.ic_item_about_author, R.string.about_item_coder, getString(R.string.coder_name));
         AboutItem thanks = new AboutItem(mainActivity, R.drawable.ic_item_about_like, R.string.about_item_thanks);
         AboutItem github = new AboutItem(mainActivity, R.drawable.ic_item_about_github, R.string.about_item_github);
         AboutItem log = new AboutItem(mainActivity, R.drawable.ic_item_about_log, R.string.about_item_log);
@@ -90,6 +92,8 @@ public class AboutFragment extends BaseFragment {
         });
         // 作者
         author.setOnClickListener(v -> mainActivity.openMyCoolapk());
+        //二次开发人员
+        coder.setOnClickListener(view -> mainActivity.openCoderBlog());
         // 致谢
         thanks.setOnClickListener(v -> new MaterialDialog.Builder(mainActivity).title(R.string.about_item_thanks_title)
                 .content(R.string.about_item_thanks_content)
@@ -109,13 +113,14 @@ public class AboutFragment extends BaseFragment {
 
         aboutLayout.addView(version);
         aboutLayout.addView(author);
+        aboutLayout.addView(coder);
         aboutLayout.addView(thanks);
         aboutLayout.addView(github);
         aboutLayout.addView(log);
         aboutLayout.addView(donate);
     }
 
-    @SuppressLint ("SimpleDateFormat")
+    @SuppressLint("SimpleDateFormat")
     private String getEggsContent() {
         String content = getString(R.string.about_egg_content);
         String contentHasDonate = getString(R.string.about_egg_content_has_donate);

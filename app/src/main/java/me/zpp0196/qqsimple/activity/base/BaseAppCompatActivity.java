@@ -89,6 +89,10 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
         openUrl("https://www.coolapk.com/u/1158829");
     }
 
+    public void openCoderBlog() {
+        openUrl("https://www.xcroot.com/");
+    }
+
     public void openUrl(String url) {
         Intent intent = new Intent();
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

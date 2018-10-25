@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
     defaultConfig {
         applicationId "me.zpp0196.qqsimple"
         minSdkVersion 16
-        targetSdkVersion 19
+        targetSdkVersion 26
         versionCode 66
         versionName "2.6.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -25,9 +25,9 @@ android {
 
 dependencies {
     compileOnly 'de.robv.android.xposed:api:82'
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support:design:26.1.0'
-    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.android.support:appcompat-v7:27.0.1'
+    implementation 'com.android.support:design:27.0.1'
+    implementation 'com.android.support:cardview-v7:27.0.1'
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
 }
 
