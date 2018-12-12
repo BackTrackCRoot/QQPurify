@@ -348,7 +348,7 @@ class MainUIHook extends BaseHook {
         Method method = findMethodIfExists(Leba, void.class, "b");
         hookMethod(method, hideView(LinearLayout.class, "a", "hide_leba_search"));
 
-        findAndHookMethod(Leba, "u", new XC_MethodHook() {
+        findAndHookMethod(Leba, "w", new XC_MethodHook() {
             @Override
             protected void afterHookedMethod(MethodHookParam param) throws Throwable {
                 final Object obj = param.thisObject;
@@ -388,7 +388,7 @@ class MainUIHook extends BaseHook {
 
         // 隐藏空间提醒
         if (isMoreThan758()) {
-            findAndHookMethod(Leba, "u", setFieldNullAfterMethod(Leba, LebaQZoneFacePlayHelper, "a", "hide_leba_qzoneRemind"));
+            findAndHookMethod(Leba, "w", setFieldNullAfterMethod(Leba, LebaQZoneFacePlayHelper, "a", "hide_leba_qzoneRemind"));
         }
     }
 }
