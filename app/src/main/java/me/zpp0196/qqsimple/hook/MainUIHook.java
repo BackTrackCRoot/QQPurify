@@ -245,15 +245,8 @@ class MainUIHook extends BaseHook {
         // 隐藏坦白说
 //        findAndHookMethod(CardController, "a", int.class, CommonCardEntry, int.class, replaceNull("hide_contacts_slidCards"));
 //        findAndHookMethod(CardController, "a", int.class, CommonCardEntry, replaceNull("hide_contacts_slidCards"));
-        if(getBool("hide_contacts_slidCards"))
-        {
-            findAndHookMethod(CTEntryMng, "d", boolean.class, new XC_MethodHook() {
-                @Override
-                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
-                    XposedHelpers.setBooleanField(param.thisObject,"d",true);
-                }
-            });
-        }
+        findAndHookMethod(CTEntryMng, "d", boolean.class, setFieldBooleanBeforeMethod("d","hide_contacts_slidCards",true));
+        
         findAndHookMethod(Contacts, "o", new XC_MethodHook() {
             @Override
             protected void afterHookedMethod(MethodHookParam param) throws Throwable {

@@ -227,6 +227,15 @@ public abstract class BaseHook {
         } : null;
     }
 
+    protected XC_MethodHook setFieldBooleanBeforeMethod(String name,String key,boolean value) {
+        return getBool(key) ? new XC_MethodHook() {
+            @Override
+            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                XposedHelpers.setBooleanField(param,name,value);
+            }
+        } : null;
+    }
+
     protected boolean getBool(String key) {
         return XPrefs.getBoolean(key);
     }
