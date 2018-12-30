@@ -21,7 +21,7 @@ public class Classes {
     public static Class<?> BannerManager;
     public static Class<?> BaseActivity;
     public static Class<?> BaseBubbleBuilder$ViewHolder;
-    public static Class<?> CardController;
+    //public static Class<?> CardController;
     public static Class<?> BaseChatItemLayout;
     public static Class<?> BaseChatPie;
     public static Class<?> BaseTroopChatPie;
@@ -30,7 +30,7 @@ public class Classes {
     public static Class<?> Card;
     public static Class<?> ChatActivityUtils;
     public static Class<?> ChatMessage;
-    public static Class<?> CommonCardEntry;
+    //public static Class<?> CommonCardEntry;
     public static Class<?> Conversation;
     public static Class<?> ConversationNowController;
     public static Class<?> Contacts;
@@ -92,6 +92,8 @@ public class Classes {
     public static Class<?> URLImageView;
     public static Class<?> VipSpecialCareGrayTips;
     public static Class<?> XEditTextEx;
+    public static Class<?> CTEntryMng;
+    public static Class<?> CardViewController;
 
     private static ClassLoader qqClassLoader;
 
@@ -117,8 +119,8 @@ public class Classes {
             BaseActivity = findClassInQQ(".app.BaseActivity");
         if (BaseBubbleBuilder$ViewHolder == null)
             BaseBubbleBuilder$ViewHolder = findClassInQQ(".activity.aio.BaseBubbleBuilder$ViewHolder");
-        if (CardController == null)
-            CardController = findClassInQQ(".activity.contacts.base.CardController");
+//        if (CardController == null)
+//            CardController = findClassInQQ(".activity.contacts.base.CardController");
         if (BaseChatItemLayout == null)
             BaseChatItemLayout = findClassInQQ(".activity.aio.BaseChatItemLayout");
         if (BaseChatPie == null)
@@ -135,8 +137,12 @@ public class Classes {
             ChatActivityUtils = findClassInQQ(".activity.ChatActivityUtils");
         if (ChatMessage == null)
             ChatMessage = findClassInQQ(".data.ChatMessage");
-        if (CommonCardEntry  == null)
-            CommonCardEntry = findClassInQQ(".activity.contacts.base.CommonCardEntry");
+//        if (CommonCardEntry  == null)
+//            CommonCardEntry = findClassInQQ(".activity.contacts.base.CommonCardEntry");
+        if(CTEntryMng == null)
+            CTEntryMng = findClassInQQ(".activity.contacts.topentry.CTEntryMng");
+        if(CardViewController == null)
+            CardViewController = findClassInQQ(".activity.contacts.base.CardViewController");
         if (Conversation == null)
             Conversation = findClassInQQ(".activity.Conversation");
         if (ConversationNowController == null)

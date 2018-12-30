@@ -16,6 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.robv.android.xposed.XC_MethodHook;
+import de.robv.android.xposed.XC_MethodReplacement;
+import de.robv.android.xposed.XposedHelpers;
 import me.zpp0196.qqsimple.hook.base.BaseHook;
 import me.zpp0196.qqsimple.hook.util.HookUtil;
 
@@ -23,8 +25,7 @@ import static android.view.View.GONE;
 import static me.zpp0196.qqsimple.hook.comm.Classes.BannerManager;
 import static me.zpp0196.qqsimple.hook.comm.Classes.BaseActivity;
 import static me.zpp0196.qqsimple.hook.comm.Classes.BusinessInfoCheckUpdate$RedTypeInfo;
-import static me.zpp0196.qqsimple.hook.comm.Classes.CardController;
-import static me.zpp0196.qqsimple.hook.comm.Classes.CommonCardEntry;
+import static me.zpp0196.qqsimple.hook.comm.Classes.CTEntryMng;
 import static me.zpp0196.qqsimple.hook.comm.Classes.Contacts;
 import static me.zpp0196.qqsimple.hook.comm.Classes.Conversation;
 import static me.zpp0196.qqsimple.hook.comm.Classes.ConversationNowController;
@@ -97,6 +98,16 @@ class MainUIHook extends BaseHook {
                 hideView(views[2], "hide_tab_contact");
                 // 动态
                 hideView(views[3], "hide_tab_dynamic");
+                // 看点 弃用 已经单独拿出来到t函数
+                //hideView(views[6], "hide_tab_readinjoy");
+            }
+        });
+
+        //隐藏看点（新）
+        findAndHookMethod(MainFragment, "t", new XC_MethodHook() {
+            @Override
+            protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                View[] views = getObject(param.thisObject, View[].class, "a");
                 // 看点
                 hideView(views[6], "hide_tab_readinjoy");
             }
@@ -232,9 +243,17 @@ class MainUIHook extends BaseHook {
      */
     private void hideContactsContent() {
         // 隐藏坦白说
-        findAndHookMethod(CardController, "a", int.class, CommonCardEntry, int.class, replaceNull("hide_contacts_slidCards"));
-        findAndHookMethod(CardController, "a", int.class, CommonCardEntry, replaceNull("hide_contacts_slidCards"));
-
+//        findAndHookMethod(CardController, "a", int.class, CommonCardEntry, int.class, replaceNull("hide_contacts_slidCards"));
+//        findAndHookMethod(CardController, "a", int.class, CommonCardEntry, replaceNull("hide_contacts_slidCards"));
+        if(getBool("hide_contacts_slidCards"))
+        {
+            findAndHookMethod(CTEntryMng, "d", boolean.class, new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedHelpers.setBooleanField(param.thisObject,"d",true);
+                }
+            });
+        }
         findAndHookMethod(Contacts, "o", new XC_MethodHook() {
             @Override
             protected void afterHookedMethod(MethodHookParam param) throws Throwable {
