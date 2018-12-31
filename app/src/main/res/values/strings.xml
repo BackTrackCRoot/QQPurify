@@ -105,11 +105,11 @@
     <string name="time_days">days</string>
 
     <string-array name="UpdateLog">
-        <item>添加了侧滑栏进入QQ空间</item>
-        <item>添加了隐藏消息列表分割线</item>
-        <item>添加了隐藏输入框的嗨爆字体按钮</item>
-        <item>修复了小尾巴不能正常显示的bug</item>
-        <item>修复了隐藏坦白说后仍会出现小红点的bug</item>
+        <item>当前项目是个人维护的</item>
+        <item>因为时间原因个人维护比较佛系</item>
+        <item>不打算发布独立版本什么的</item>
+        <item>大部分维护主要是看个人需求</item>
+        <item>当前适配了7.9.5的QQ版本</item>
     </string-array>
 
     <string-array name="Matters"/>

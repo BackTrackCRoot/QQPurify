@@ -18,12 +18,12 @@ public class Maps {
     public static void init() {
         if (panelItem == null) {
             panelItem = new HashMap<>();
-            panelItem.put("hide_chat_toolbar_voice", new String[]{"a", "c"});
-            panelItem.put("hide_chat_toolbar_pic", new String[]{"g", "i"});
-            panelItem.put("hide_chat_toolbar_camera", new String[]{"j", "m", "n"});
-            panelItem.put("hide_chat_toolbar_redPacket", new String[]{"s"});
-            panelItem.put("hide_chat_toolbar_poke", new String[]{"z"});
-            panelItem.put("hide_chat_toolbar_gif", new String[]{"B", "F"});
+            panelItem.put("hide_chat_toolbar_voice", new String[]{"a", "b", "c", "d", "e", "f"});
+            panelItem.put("hide_chat_toolbar_pic", new String[]{"g", "h", "i"});
+            panelItem.put("hide_chat_toolbar_camera", new String[]{"j", "k"});
+            panelItem.put("hide_chat_toolbar_redPacket", new String[]{"q"});
+            panelItem.put("hide_chat_toolbar_poke", new String[]{"y"});
+            panelItem.put("hide_chat_toolbar_gif", new String[]{"z", "C", "D"});
         }
         if (sidebarItem == null) {
             sidebarItem = new HashMap<>();

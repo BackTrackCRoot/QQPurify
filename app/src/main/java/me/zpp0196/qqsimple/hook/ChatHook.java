@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 import de.robv.android.xposed.XC_MethodHook;
+import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedHelpers;
 import me.zpp0196.qqsimple.hook.base.BaseHook;
 
