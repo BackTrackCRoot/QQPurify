@@ -20,7 +20,7 @@ public class Maps {
             panelItem = new HashMap<>();
             panelItem.put("hide_chat_toolbar_voice", new String[]{"a", "b", "c", "d", "e", "f"});
             panelItem.put("hide_chat_toolbar_pic", new String[]{"g", "h", "i"});
-            panelItem.put("hide_chat_toolbar_camera", new String[]{"j", "k"});
+            panelItem.put("hide_chat_toolbar_camera", new String[]{"j", "k","l"});
             panelItem.put("hide_chat_toolbar_redPacket", new String[]{"q"});
             panelItem.put("hide_chat_toolbar_poke", new String[]{"y"});
             panelItem.put("hide_chat_toolbar_gif", new String[]{"z", "C", "D"});
